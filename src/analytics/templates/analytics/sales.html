@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="row my-4">
+  <div class="col-12">
+    <h1>Sales Data</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4">
+    <h3>Today's sales</h3>
+    <hr>
+    <p>Orders total : ${{ today.recent_data.total__sum }} </p>
+    <ul>
+      {% for order in today.recent %}
+        <li class='my-3'>
+          Order # {{ order.order_id }}<br>
+          ${{ order.total }}<br>
+          {{ order.updated|timesince}} ago
+        </li>
+      {% endfor %}
+    </ul>
+
+    <h3>This Week's sales</h3>
+    <hr>
+    <p>Orders total : ${{ this_week.recent_data.total__sum }} </p>
+    <ul>
+      {% for order in this_week.recent %}
+        <li class='my-3'>
+          Order # {{ order.order_id }}<br>
+          ${{ order.total }}<br>
+          {{ order.updated|timesince}} ago
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class='col-8'>
+    <canvas class='ecommerce-render-chart' id="thisWeekSales" data-type='week' width="400" height="400"></canvas>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h1>Last four Week's sales</h1>
+  </div>
+  <div class="col-4">
+    <p>Orders total : ${{ last_four_week.recent_data.total__sum }} </p>
+    <p>Shipped {% if last_four_week.shipped_data.total__sum %} total : ${{ last_four_week.shipped_data.total__sum }}{% endif %}</p>
+    <p>Paid Total : ${{ last_four_week.paid_data.total__sum }}</p>
+  </div>
+  <div class="col-8">
+    <canvas class='ecommerce-render-chart' id="FourWeekSales" data-type='4weeks' width="400" height="400"></canvas>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Login</h1>
+    {# {% include "accounts/snippets/form.html" %} #}
+    <form method='POST'> {% csrf_token %}
+      {{ form }}
+      <button type='submit' class='btn btn-default'>Submit</button>
+    </form>
+{% endblock %}
