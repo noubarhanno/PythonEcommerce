@@ -82,8 +82,8 @@ MAILCHIMP_API_KEY = os.environ.get("MAILCHIMP_API_KEY")
 MAILCHIMP_DATA_CENTER = "us19"
 MAILCHIMP_EMAIL_LIST_ID = os.environ.get("MAILCHIMP_EMAIL_LIST_ID")
 
-STRIP_SECRET_KEY =os.environ.get("STRIP_SECRET_KEY",'sk_test_dcQwZSOCpgPbOkLHaStIMRIs')
-STRIPE_PUB_KEY= os.environ.get("STRIPE_PUB_KEY",'pk_test_dIXXyNLLFIHbCRidgDWEiSOL')
+STRIP_SECRET_KEY =os.environ.get("STRIP_SECRET_KEY")
+STRIPE_PUB_KEY= os.environ.get("STRIPE_PUB_KEY")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
