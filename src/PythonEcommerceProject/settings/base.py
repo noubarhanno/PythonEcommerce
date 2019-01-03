@@ -76,13 +76,6 @@ LOGOUT_URL = '/logout/'
 FORCE_SESSION_TO_ONE = False
 FORCE_INACTIVE_USER_ENDSESSION = False
 
-MAILCHIMP_API_KEY = "11569c7c2c8f6de8310c626c8c066422-us19"
-MAILCHIMP_DATA_CENTER = "us19"
-MAILCHIMP_EMAIL_LIST_ID = "ce0e9dc684"
-
-STRIP_SECRET_KEY ='sk_test_dcQwZSOCpgPbOkLHaStIMRIs'
-STRIPE_PUB_KEY= 'pk_test_dIXXyNLLFIHbCRidgDWEiSOL'
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
