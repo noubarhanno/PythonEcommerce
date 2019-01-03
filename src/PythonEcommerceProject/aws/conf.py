@@ -4,8 +4,8 @@ import os
 AWS_GROUP_NAME = "Noubar-Ecommerce-Group"
 AWS_USERNAME = "noubar-ecommerce-user"
 # the lines above is only for reference not to be used for access
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID","AKIAJYKT2MVMTXPDDZXQ")
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY","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")
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
