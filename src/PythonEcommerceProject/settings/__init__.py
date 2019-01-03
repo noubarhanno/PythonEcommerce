@@ -1,17 +1,17 @@
-# from .base import *
-#
-# from .production import *
-#
+from .base import *
+
+from .production import *
+
 #
 # try:
 #     from .local import *
 # except:
 #     pass
 
-try:
-    from .local_justin import *
-except:
-    pass
+# try:
+#     from .local_justin import *
+# except:
+#     pass
 
 
 # we did the import above because wenever we import the settings from base file all the content will be overidden by local and then all the content will be again overidden
